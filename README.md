@@ -1,5 +1,10 @@
 # gta-ynov-vue
 
+## Objectif du jour
+ - Comprendre le sujet
+ - installer l'environement 
+ - deployer le build 
+
 ## Project setup
 ```
 npm install
