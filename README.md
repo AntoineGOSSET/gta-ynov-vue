@@ -1,6 +1,10 @@
 # gta-ynov-vue
 https://antoinegosset.github.io/#/
 
+## Objetcif du jour 09/11 :
+
+ - Créer les premières vue et components
+ - Avoir une première interface graphique
 
 
 ## Objectif du jour 08/11 :
