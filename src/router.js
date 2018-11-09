@@ -25,6 +25,18 @@ export default new Router({
       name: "login",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Login.vue")
+    },
+    {
+      path: "/salarie_info",
+      name: "salarie_info",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Salarie_info.vue")
+    },
+    {
+      path: "/salarie_calendar",
+      name: "salarie_calendar",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Salarie_calendar.vue")
     }
   ]
 });

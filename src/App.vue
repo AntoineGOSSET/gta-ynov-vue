@@ -15,6 +15,10 @@
       <b-nav-item to="/about">About</b-nav-item>
       
     </b-navbar-nav>
+    <b-navbar-nav>
+      <b-nav-item to="/salarie_info">Information salarie</b-nav-item>
+      <b-nav-item to="/salarie_calendar">Planning salarie</b-nav-item>
+    </b-navbar-nav>
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
@@ -27,7 +31,7 @@
         <template slot="button-content">
           <em>Utilisateur</em>
         </template>
-        <b-dropdown-item href="#">Profile</b-dropdown-item>
+        <b-dropdown-item to="/Salarie_info">Fiche d'indentité</b-dropdown-item>
         <b-dropdown-item href="#">Déconnexion</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-navbar-nav>
