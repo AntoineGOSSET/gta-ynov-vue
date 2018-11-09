@@ -6,6 +6,7 @@ https://antoinegosset.github.io/#/
  - Créer les premières vue et components
  - Avoir une première interface graphique
 
+Bilan : J'ai réalisé la page pour afficher les informations de l'utilisateur et commencé la page planning
 
 ## Objectif du jour 08/11 :
  - Comprendre le sujet
