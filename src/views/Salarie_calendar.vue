@@ -1,46 +1,59 @@
-    // src/components/Calendar.vue
+<template>
+<div>
+  <h2 class="mt-4">Planning</h2>
+  <b-pagination-nav :link-gen="linkGen" :number-of-pages="52" v-model="currentPage"/>
+  <br>
 
-    <template>
-      <full-calendar :events="events" />
-    </template>
+  <div class="mt-4">Semaine {{currentPage}}</div>
+  
+  <b-form>
+   
+      <b-form-group id="day1inputgroup"
+                    label="Lundi:"
+                    label-for="day1input">
+      <b-row>
+        <b-col>
+        <b-form-input id="day1input"
+                      type="text"
+                      required>
+        </b-form-input>
+        </b-col>
+        <b-col>
+        <b-form-input id="day1input2"
+                      type="text"
+                      required>
+        </b-form-input>
+        </b-col>
+        </b-row>
+      </b-form-group>
+    
+    <b-form-group id="day2inputgroup"
+                  label="Mardi:"
+                  label-for="day2input">
+      <b-form-input id="exampleInput2"
+                    type="text"
+                    required>
+      </b-form-input>
+    </b-form-group>
+    <b-button type="submit" variant="primary">Se connecter</b-button>
+  </b-form>
 
-    <script>
-    import FullCalendar from 'vue-fullcalendar';
-    export default {
-      name: 'Calendar',
-      props: ['events'],
-      components: {
-        FullCalendar
-      }
-    }
-    </script>
+</div>
+</template>
 
-    <style>
-    .red {
-      background: rgb(235, 77, 77) !important;
-      color: whitesmoke !important;
+<script>
+export default {
+
+  data () {
+    return {
+      currentPage: 45
     }
-    .blue {
-      background: rgb(59, 59, 163) !important;
-      color: whitesmoke !important;
+  },
+  methods: {
+    linkGen (pageNum) {
+      return '#semaine/' + pageNum
     }
-    .orange {
-      background: orange !important;
-      color: white !important;
-    }
-    .green {
-      background: rgb(49, 155, 49) !important;
-      color: white !important;
-    }
-    .blue,
-    .orange,
-    .red,
-    .green {
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: capitalize;
-    }
-    .event-item {
-      padding: 2px 0 2px 4px !important;
-    }
-    </style>
+  }
+}
+</script>
+
