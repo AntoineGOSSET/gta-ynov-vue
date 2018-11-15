@@ -6,7 +6,7 @@ https://antoinegosset.github.io/#/
  - Créer un format de donner json
  - Récupérer les données json dans une Vue
 
-Bilan : J'ai créer un format de donner qui correpsond à mes attentes dans un fichier JSON, j'ai récuperé un DataManager d'un autre repo pour comprendre son fonctionnement et l'adapter pour mon utilisation. Cette partie est complexe pour moi, n'étant pas habitué au developpement web, chaque étapes est une découverte. 
+Bilan : J'ai créé un format de donner qui correpsond à mes attentes dans un fichier JSON, j'ai récuperé un DataManager d'un autre repo pour comprendre son fonctionnement et l'adapter pour mon utilisation. Cette partie est complexe pour moi, n'étant pas habitué au developpement web, chaque étapes est une découverte. 
 
 ## Objetcif du jour 09/11 :
 
