@@ -1,0 +1,80 @@
+{
+    "AntoineGOSSET": {
+        "password": "123",
+        "name": "Antoine",
+        "lastname": "GOSSET",
+        "birthdate": "1996-09-03",
+        "adresse": {
+            "num": "20",
+            "voie": "boulevard du général de Gaulle",
+            "comp": "bat D appt D406",
+            "cdp": 44200,
+            "ville": "Nantes"
+        },
+        "type contrat": "CDD",
+        "end_date": "2019-31-08",
+        "planning": {
+            "1": {
+                "lundi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "mardi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "mercredi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "jeudi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "vendredi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                }
+            },
+            "2": {
+                "lundi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "mardi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "mercredi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "jeudi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                },
+                "vendredi": {
+                    "crenau1": 3,
+                    "crenau2": 4,
+                    "abscence": "None"
+                }
+            }
+        },
+        "conge": {
+            "CA": 25,
+            "RTT": 10
+        },
+        "manager": "",
+        "satut": "employe",
+        "team": []
+    }
+}
