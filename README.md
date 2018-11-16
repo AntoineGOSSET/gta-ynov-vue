@@ -5,6 +5,10 @@ https://antoinegosset.github.io/#/
  - Récuperer les données json dans une de mes Vue
  - Login avec un utilisateur
  
+ Bilan : Le système de login fonctionne avec un utilisateur, un problème est rencontré lors du rafraichissement de la page l'utilisateur est déconnecté.
+ La page de formulaire de l'utilisateur récupere ses données, il faudra maintenant qu'il puisse les modifier.
+ J'ai commencé à récuperer les données planning de l'utilisateur (sans succès)
+ 
 ## Objetcif du jour 15/11 :
 
  - Créer un format de donner json
