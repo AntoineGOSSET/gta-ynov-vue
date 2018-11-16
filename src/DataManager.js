@@ -46,78 +46,85 @@ let checkData = ()=> {
   if (getData() == null){
     setData({
       users : [{
-        id : 0,
-        password : "admin",
-        pseudo : "Admin",
-        firstName : "Matthieu",
-        lastName : "Fournier",
-        ddn : "1996-06-10",
-        tel : "00 11 22 33 44",
-        addresse : {
-          cp : "44200",
-          ville : "Nantes",
-          rue : "XX rue de la rue",
-          complement : "12em etage"
-        },
-        mail : "admin@domain.com",
-        roles : ['USER', 'TEAM_LEADER', 'DIRECTEUR_DES_RESSOURCES_HUMAINES', 'ADMIN'],
-        contrats : [{
-          dateDebut : "2018-11-08",
-          dateFin : "2018-11-16",
-          demandes : []
-        }]
-      },{
-        id : 1,
-        password : "user",
-        pseudo : "BenjaminBarsseur",
-        firstName : "Benjamin",
-        lastName : "Brasseur",
-        ddn : "1996-06-10",
-        tel : "00 11 22 33 44",
-        addresse : {
-          cp : "44200",
-          ville : "Nantes",
-          rue : "XX rue de la rue",
-          complement : "12em etage"
-        },
-        mail : "user@domain.com",
-        roles : ['USER'],
-        contrats : [{
-          dateDebut : "2018/11/08",
-          dateFin : "2018-11-16",
-          demandes : [
-          {
-            id : 'CONGE_PAYE',
-            title : 'Congé payé',
-            jourPayer : true,
-            dates : [
-              '2018-11-12'
-            ]
-          },{
-            id : 'RECUPERATION',
-            title : 'Récupération',
-            jourPayer : true,
-            dates : [
-              '2018-11-13'
-            ]
-          },{
-            id : 'AMENAGEMENT_HORAIRE',
-            title : 'Aménagment d\'horaire',
-            jourPayer : true,
-            dates : [
-              '2018-11-14'
-            ]
-          },{
-            id : 'ABSENCE',
-            title : 'Absence',
-            jourPayer : false,
-            dates : [
-              '2018-11-15'
-            ]
-          }]
-        }]
-      }]
-    })
+            "mail": "antoine.gosset@ynov.com",
+            "password": "123",
+            "name": "Antoine",
+            "lastname": "GOSSET",
+            "birthdate": "1996-09-03",
+            "adresse": {
+                "num": "20",
+                "voie": "boulevard du général de Gaulle",
+                "comp": "bat D appt D406",
+                "cdp": 44200,
+                "ville": "Nantes"
+            },
+            "type contrat": "CDD",
+            "end_date": "2019-31-08",
+            "planning": {
+                "S45": {
+                    "lundi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "CA"
+                    },
+                    "mardi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "CA"
+                    },
+                    "mercredi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "CA"
+                    },
+                    "jeudi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    },
+                    "vendredi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "RTT"
+                    }
+                },
+                "S46": {
+                    "lundi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    },
+                    "mardi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    },
+                    "mercredi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    },
+                    "jeudi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    },
+                    "vendredi": {
+                        "crenau1": 3,
+                        "crenau2": 4,
+                        "abscence": "None"
+                    }
+                }
+            },
+            "conge": {
+                "CA": 25,
+                "RTT": 10
+            },
+            "manager": "",
+            "satut": "employe",
+            "team": []
+        }
+    ]})
   }
 }
 

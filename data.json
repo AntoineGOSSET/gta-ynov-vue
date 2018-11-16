@@ -4,6 +4,7 @@
         "name": "Antoine",
         "lastname": "GOSSET",
         "birthdate": "1996-09-03",
+        "phonenumber" : "0606060606",
         "adresse": {
             "num": "20",
             "voie": "boulevard du général de Gaulle",

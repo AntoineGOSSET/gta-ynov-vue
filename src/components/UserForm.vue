@@ -6,7 +6,8 @@
             label-for="nameInput">
                 <b-form-input id="nameInput"
                 type="text"
-                placeholder="Nom">
+                placeholder="Nom"
+                v-model="user.lastname">
                 </b-form-input>
             </b-form-group>
         </b-col>
@@ -16,7 +17,8 @@
             label-for="firstnameInput">
                 <b-form-input id="firstnameInput"
                 type="text"
-                placeholder="Prénom">
+                placeholder="Prénom"
+                v-model="user.name">
                 </b-form-input>
             </b-form-group>
         </b-col>
@@ -28,7 +30,7 @@
             label = "Date de naissance:"
             label-for="birthdateInput">
                 <b-form-input id="birthdateInput"
-                type="date">
+                type="date" v-model="user.birthdate">
                 </b-form-input>
             </b-form-group>
         </b-col>
@@ -38,17 +40,8 @@
             label = "Adresse mail:"
             label-for="emailInput">
                 <b-form-input id="emailInput"
-                type="email">
-                </b-form-input>
-            </b-form-group>
-        </b-col>
-
-        <b-col>
-            <b-form-group id="phoneInputGroup"
-            label = "Numéro de téléphone:"
-            label-for="phoneInput">
-                <b-form-input id="phoneInput"
-                type="tel">
+                type="email"
+                v-model="user.mail">
                 </b-form-input>
             </b-form-group>
         </b-col>
@@ -60,7 +53,8 @@
             label = "N°"
             label-for="numberadressInput">
                 <b-form-input id="numberadressInput"
-                type="number">
+                type="number"
+                v-model="user.adresse.num">
             </b-form-input>
             </b-form-group>
         </b-col>
@@ -70,7 +64,8 @@
             label = "Nom de la voie"
             label-for="roadadressInput">
                 <b-form-input id="roadadressInput"
-                type="text">
+                type="text"
+                v-model="user.adresse.voie">
             </b-form-input>
             </b-form-group>
         </b-col>
@@ -80,7 +75,8 @@
             label = "Complément d'adresse"
             label-for="completadressInput">
                 <b-form-input id="completadressInput"
-                type="text">
+                type="text"
+                v-model="user.adresse.comp">
             </b-form-input>
             </b-form-group>
         </b-col>
@@ -90,7 +86,8 @@
             label = "Ville"
             label-for="cityadressInput">
                 <b-form-input id="cityadressInput"
-                type="text">
+                type="text"
+                v-model="user.adresse.ville">
             </b-form-input>
             </b-form-group>
         </b-col>
@@ -100,7 +97,8 @@
             label = "Code postal"
             label-for="codeadressInput">
                 <b-form-input id="codeadressInput"
-                type="number">
+                type="number"
+                v-model="user.adresse.cdp">
             </b-form-input>
             </b-form-group>
         </b-col>
@@ -108,3 +106,18 @@
     </b-row>
 </div>
 </template>
+
+<script>
+export default {
+  created: function() {
+    console.log("profil created");
+    this.user = this.$root.getLoggedUser();
+    console.log(this.user.phonenumber);
+  },
+  data: function() {
+    return {
+      user: {}
+    };
+  }
+};
+</script>
