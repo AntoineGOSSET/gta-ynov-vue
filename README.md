@@ -1,6 +1,10 @@
 # gta-ynov-vue
 https://antoinegosset.github.io/#/
 
+## Objectif du jour 16/11 :
+ - Récuperer les données json dans une de mes Vue
+ - Login avec un utilisateur
+ 
 ## Objetcif du jour 15/11 :
 
  - Créer un format de donner json
