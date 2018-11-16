@@ -1,12 +1,16 @@
 # gta-ynov-vue
 https://antoinegosset.github.io/#/
 
+## Objectif du jour 16/11 :
+ - Récuperer les données json dans une de mes Vue
+ - Login avec un utilisateur
+ 
 ## Objetcif du jour 15/11 :
 
  - Créer un format de donner json
  - Récupérer les données json dans une Vue
 
-Bilan : J'ai créer un format de donner qui correpsond à mes attentes dans un fichier JSON, j'ai récuperé un DataManager d'un autre repo pour comprendre son fonctionnement et l'adapter pour mon utilisation. Cette partie est complexe pour moi, n'étant pas habitué au developpement web, chaque étapes est une découverte. 
+Bilan : J'ai créé un format de donner qui correpsond à mes attentes dans un fichier JSON, j'ai récuperé un DataManager d'un autre repo pour comprendre son fonctionnement et l'adapter pour mon utilisation. Cette partie est complexe pour moi, n'étant pas habitué au developpement web, chaque étapes est une découverte. 
 
 ## Objetcif du jour 09/11 :
 
