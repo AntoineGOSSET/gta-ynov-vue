@@ -6,14 +6,14 @@
 
   <h3 class="mt-4">Semaine {{currentPage}}</h3>
   <b-container>
-  <b-form>
+  <b-form v-on:submit.prevent="doSubmit">
    
       <b-form-group id="day1inputgroup"
                     label="Lundi:"
                     label-for="day1input">
-
         <b-row class="justify-content-center">
           <b-col cols="4" md="2" >
+          
           <b-form-input id="day1input"
                         placeholder="Matin"
                         type="number"
@@ -23,6 +23,7 @@
           </b-col>
 
           <b-col cols="4" md="2">
+           
           <b-form-input id="day1input2"
                         placeholder="Après-midi"
                         type="number"
@@ -32,6 +33,7 @@
           </b-col>
 
           <b-col cols="4" md="1">
+          
           <b-form-input id="day1input2"
                         placeholder="Déjeuner"
                         type="number"
@@ -41,7 +43,7 @@
           </b-col>
 
           <b-col cols="12" md="3">
-            
+         
               <b-form-radio-group id="btnradios2"
                             buttons
                             button-variant="outline-primary"
@@ -52,6 +54,7 @@
           </b-col>
 
           <b-col>
+          
               <p>Heures effectives : {{user.planning[currentPage-1].lundi.crenau2 - user.planning[currentPage-1].lundi.crenau1 - user.planning[currentPage-1].lundi.pause}}</p>
           </b-col>
         </b-row>
@@ -226,20 +229,18 @@
                           name="radioBtnOutline" />
         </b-col>
         <b-col>
+          <div>
               <p>Heures effectives : {{user.planning[currentPage-1].vendredi.crenau2 - user.planning[currentPage-1].vendredi.crenau1 - user.planning[currentPage-1].vendredi.pause}}</p>
+          </div>
           </b-col>
         </b-row>
-      </b-form-group>
-    
+      </b-form-group>              
     <b-button type="submit" variant="primary">Enregistrer</b-button>
   </b-form>
+
   <b-row class="justify-content-center">
-    
     <b-col>
-      <p>CA disponnibles : {{user.conge.CA}}</p>   
-    </b-col>
-    <b-col>
-      <p>RTT disponnibles : {{user.conge.RTT}}</p>
+      <p>Heures semaines : {{user.planning[currentPage-1].lundi.crenau2 - user.planning[currentPage-1].lundi.crenau1 - user.planning[currentPage-1].lundi.pause + user.planning[currentPage-1].mardi.crenau2 - user.planning[currentPage-1].mardi.crenau1 - user.planning[currentPage-1].mardi.pause + user.planning[currentPage-1].mercredi.crenau2 - user.planning[currentPage-1].mercredi.crenau1 - user.planning[currentPage-1].mercredi.pause +  user.planning[currentPage-1].jeudi.crenau2 - user.planning[currentPage-1].jeudi.crenau1 - user.planning[currentPage-1].jeudi.pause + user.planning[currentPage-1].vendredi.crenau2 - user.planning[currentPage-1].vendredi.crenau1 - user.planning[currentPage-1].vendredi.pause}} / {{user.tauxhoraire}}</p>   
     </b-col>
   </b-row>
   </b-container>
@@ -251,7 +252,6 @@ export default {
   created: function() {
     console.log("profil created");
     this.user = this.$root.getLoggedUser();
-    
   },
   data() {
     return {
@@ -265,6 +265,11 @@ export default {
     };
   },
   methods: {
+    doSubmit: function() {
+      this.$root.saveUser(this.user);
+      //this.user = this.$root.getLoggedUser()
+      alert("Modification prise en compte");
+    },
     linkGen(pageNum) {
       return "#semaine/" + pageNum;
     }

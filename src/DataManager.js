@@ -59,6 +59,7 @@ let checkData = () => {
           "ville": "Nantes"
         },
         "type contrat": "CDD",
+        "tauxhoraire" : 35,
         "end_date": "2019-31-08",
         "planning": [
           {

@@ -110,9 +110,6 @@
 <script>
 export default {
   created: function() {
-    console.log("profil created");
-    this.user = this.$root.getLoggedUser();
-    console.log(this.user.phonenumber);
   },
   data: function() {
     return {
