@@ -1,8 +1,16 @@
 # gta-ynov-vue
 https://antoinegosset.github.io/#/
+
+login: antoine.gosset@ynov.com
+password: 123
+
 ## Objectif du 22/11 :
  - Afficher les crénaux par jour et les congés
  - Modifier des valeurs dans les données de l'utilisateur (planning ou informations personnelles)
+ 
+ Bilan: Les données du planning et de la fiche personnelle peuvent être mdofier et enregistrer en localstorage
+ Pb : Il faut parfois faire 2 fois le login avant que cela fonctionne, si l'on rafraichi la page on est déconnecté
+ 
 ## Objectif du jour 16/11 :
  - Récuperer les données json dans une de mes Vue
  - Login avec un utilisateur
