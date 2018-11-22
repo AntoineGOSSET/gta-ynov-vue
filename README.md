@@ -1,6 +1,8 @@
 # gta-ynov-vue
 https://antoinegosset.github.io/#/
-
+## Objectif du 22/11 :
+ - Afficher les crénaux par jour et les congés
+ - Modifier des valeurs dans les données de l'utilisateur (planning ou informations personnelles)
 ## Objectif du jour 16/11 :
  - Récuperer les données json dans une de mes Vue
  - Login avec un utilisateur
