@@ -6,7 +6,8 @@ password: 123
 
 ## Objectif du 23/11 :
  - Calculer le taux horaire semaine et alerter lorsque l'heure indiquée sur le conrtat est pas respectée
- - Ajouter une deuxième utilisateur admin 
+ - Ajouter une deuxième utilisateur
+ - Gérer le responsive
  
  
 ## Objectif du 22/11 :
