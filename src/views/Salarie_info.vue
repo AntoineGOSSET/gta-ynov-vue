@@ -132,7 +132,6 @@ export default {
   methods: {
     doSubmit: function() {
       this.$root.saveUser(this.user);
-      console.log(this.user);
       //this.user = this.$root.getLoggedUser()
       alert("Modification prise en compte");
     }

@@ -55,7 +55,7 @@
 
           <b-col>
           
-              <p>Heures effectives : {{user.planning[currentPage-1].lundi.crenau2 - user.planning[currentPage-1].lundi.crenau1 - user.planning[currentPage-1].lundi.pause}}</p>
+              <p>Heures effectives : {{calculHoraire('lundi')}}</p>
           </b-col>
         </b-row>
       </b-form-group>
@@ -100,7 +100,7 @@
                           name="radioBtnOutline" />
         </b-col>
         <b-col>
-              <p>Heures effectives : {{user.planning[currentPage-1].mardi.crenau2 - user.planning[currentPage-1].mardi.crenau1 - user.planning[currentPage-1].mardi.pause}}</p>
+              <p>Heures effectives : {{calculHoraire('mardi')}}</p>
           </b-col>
         </b-row>
       </b-form-group>
@@ -143,7 +143,7 @@
                           name="radioBtnOutline" />
         </b-col>
         <b-col>
-              <p>Heures effectives : {{user.planning[currentPage-1].mercredi.crenau2 - user.planning[currentPage-1].mercredi.crenau1 - user.planning[currentPage-1].mercredi.pause}}</p>
+              <p>Heures effectives : {{calculHoraire('mercredi')}}</p>
           </b-col>
         </b-row>
       </b-form-group>
@@ -186,7 +186,7 @@
                           name="radioBtnOutline" />
         </b-col>
         <b-col>
-              <p>Heures effectives : {{user.planning[currentPage-1].jeudi.crenau2 - user.planning[currentPage-1].jeudi.crenau1 - user.planning[currentPage-1].jeudi.pause}}</p>
+              <p>Heures effectives : {{calculHoraire('jeudi')}}</p>
           </b-col>
         </b-row>
       </b-form-group>
@@ -230,7 +230,7 @@
         </b-col>
         <b-col>
           <div>
-              <p>Heures effectives : {{user.planning[currentPage-1].vendredi.crenau2 - user.planning[currentPage-1].vendredi.crenau1 - user.planning[currentPage-1].vendredi.pause}}</p>
+              <p>Heures effectives : {{calculHoraire('vendredi')}}</p>
           </div>
           </b-col>
         </b-row>
@@ -240,7 +240,7 @@
 
   <b-row class="justify-content-center">
     <b-col>
-      <p>Heures semaines : {{user.planning[currentPage-1].lundi.crenau2 - user.planning[currentPage-1].lundi.crenau1 - user.planning[currentPage-1].lundi.pause + user.planning[currentPage-1].mardi.crenau2 - user.planning[currentPage-1].mardi.crenau1 - user.planning[currentPage-1].mardi.pause + user.planning[currentPage-1].mercredi.crenau2 - user.planning[currentPage-1].mercredi.crenau1 - user.planning[currentPage-1].mercredi.pause +  user.planning[currentPage-1].jeudi.crenau2 - user.planning[currentPage-1].jeudi.crenau1 - user.planning[currentPage-1].jeudi.pause + user.planning[currentPage-1].vendredi.crenau2 - user.planning[currentPage-1].vendredi.crenau1 - user.planning[currentPage-1].vendredi.pause}} / {{user.tauxhoraire}}</p>   
+      <p>Heures semaines : {{calculSemaine()}}</p>   
     </b-col>
   </b-row>
   </b-container>
@@ -250,7 +250,6 @@
 <script>
 export default {
   created: function() {
-    console.log("profil created");
     this.user = this.$root.getLoggedUser();
   },
   data() {
@@ -272,6 +271,29 @@ export default {
     },
     linkGen(pageNum) {
       return "#semaine/" + pageNum;
+    },
+    calculHoraire(day) {
+      return eval(
+        "this.user.planning[this.currentPage-1]." +
+          day +".crenau2 - this.user.planning[this.currentPage-1]." +
+          day +".crenau1 - this.user.planning[this.currentPage-1]." +
+          day +".pause"
+      );
+    },
+    calculSemaine() {
+      var heureSemaine = 0;
+      var dayliste = ["lundi", "mardi", "mercredi", "jeudi", "vendredi"];
+      dayliste.forEach(function(day) {
+
+        if (
+          eval("this.user.planning[this.currentPage-1]." + day + ".abscence") == "present"
+        ) {
+          heureSemaine += this.calculHoraire(day)
+          console.log("PASSE")
+        }
+      }, this);
+      console.log(heureSemaine)
+      return heureSemaine
     }
   }
 };

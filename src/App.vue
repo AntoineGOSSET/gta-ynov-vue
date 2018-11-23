@@ -64,9 +64,7 @@
 <script>
 export default {
   created : function(){
-      console.log("NavBar created")
       this.user = this.$root.getLoggedUser()
-      console.log(this.$root.isLoggin)
     },
   methods : {
     logout : function (){
