@@ -4,11 +4,15 @@ https://antoinegosset.github.io/#/
 login: antoine.gosset@ynov.com
 password: 123
 
+login manager: manager@ynov.com
+password: 1234
+
 ## Objectif du 23/11 :
  - Calculer le taux horaire semaine et alerter lorsque l'heure indiquée sur le conrtat est pas respectée
  - Ajouter une deuxième utilisateur
  - Gérer le responsive
  
+ Bilan: Les 3 points sont complétés j'ai pu ajouter une page pour le manager
  
 ## Objectif du 22/11 :
  - Afficher les crénaux par jour et les congés
