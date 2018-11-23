@@ -2,50 +2,201 @@
 Data Manager
 */
 
-let roles = ['USER', 'TEAM_LEADER', 'DIRECTEUR_DES_RESSOURCES_HUMAINES', 'ADMIN']
-let demandes = {
-  CONGE_PAYE: {
-    id: 'CONGE_PAYE',
-    title: 'Congé payé',
-    jourPayer: true,
-    dates: [
-      '2018-11-12'
-    ]
-  },
-  RECUPERATION: {
-    id: 'RECUPERATION',
-    title: 'Récupération',
-    jourPayer: true,
-    dates: [
-      '2018-11-13'
-    ]
-  },
-  AMENAGEMENT_HORAIRE: {
-    id: 'AMENAGEMENT_HORAIRE',
-    title: 'Aménagment d\'horaire',
-    jourPayer: true,
-    dates: [
-      '2018-11-14'
-    ]
-  },
-  ABSENCE: {
-    id: 'ABSENCE',
-    title: 'Absence',
-    jourPayer: false,
-    dates: [
-      '2018-11-15'
-    ]
-  }
-}
-
-let copy = obj => JSON.parse(JSON.stringify(obj))
 let getData = () => JSON.parse(localStorage.getItem('data'))
 let setData = a => localStorage.setItem('data', JSON.stringify(a))
 
 let checkData = () => {
   if (getData() == null) {
     setData({
-      users: [{
+      users: [
+        {
+          "mail": "employe@ynov.com",
+          "password": "12345",
+          "name": "Alexandre",
+          "lastname": "Desvallee",
+          "birthdate": "1996-09-03",
+          "adresse": {
+            "num": "20",
+            "voie": "boulevard du général de Gaulle",
+            "comp": "bat D appt D406",
+            "cdp": 44200,
+            "ville": "Nantes"
+          },
+          "type contrat": "CDD",
+          "tauxhoraire" : 35,
+          "end_date": "2019-31-08",
+          "planning": [
+            {
+              "lundi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mardi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mercredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "jeudi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "vendredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              }
+            },
+            {
+              "lundi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mardi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mercredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "jeudi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "vendredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              }
+            },
+            {
+              "lundi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mardi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mercredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "jeudi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "vendredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              }
+            },
+            {
+              "lundi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mardi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mercredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "jeudi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "vendredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              }
+            },
+            {
+              "lundi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mardi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "mercredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "jeudi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              },
+              "vendredi": {
+                "crenau1": 9,
+                "crenau2": 17,
+                "pause": 1,
+                "abscence": "present"
+              }
+            },
+        
+          ],
+          "conge": {
+            "CA": 25,
+            "RTT": 10
+          },
+          "manager": false,
+          "RH": false,
+          "team": []
+        },
+        {
         "mail": "antoine.gosset@ynov.com",
         "password": "123",
         "name": "Antoine",
@@ -58,309 +209,365 @@ let checkData = () => {
           "cdp": 44200,
           "ville": "Nantes"
         },
-        "type contrat": "CDD",
-        "tauxhoraire" : 35,
+        "type contrat": "CDI",
+        "tauxhoraire" : 40,
         "end_date": "2019-31-08",
         "planning": [
           {
             "lundi": {
               "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
             },
             "jeudi": {
               "crenau1": 9,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
             },
             "vendredi": {
               "crenau1": 9,
-              "crenau2": 15,
+              "crenau2": 18,
               "pause": 1,
-              "abscence": "RTT"
+              "abscence": "present"
             }
           },
           {
             "lundi": {
               "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
             },
             "jeudi": {
               "crenau1": 9,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
             },
             "vendredi": {
               "crenau1": 9,
-              "crenau2": 15,
+              "crenau2": 18,
               "pause": 1,
-              "abscence": "RTT"
+              "abscence": "present"
             }
           },
           {
             "lundi": {
               "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
             },
             "jeudi": {
               "crenau1": 9,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
             },
             "vendredi": {
               "crenau1": 9,
-              "crenau2": 15,
+              "crenau2": 18,
               "pause": 1,
-              "abscence": "RTT"
+              "abscence": "present"
             }
           },
           {
             "lundi": {
               "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
             },
             "jeudi": {
               "crenau1": 9,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
             },
             "vendredi": {
               "crenau1": 9,
-              "crenau2": 15,
+              "crenau2": 18,
               "pause": 1,
-              "abscence": "RTT"
+              "abscence": "present"
             }
           },
           {
             "lundi": {
               "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 9,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
             },
             "jeudi": {
               "crenau1": 9,
               "crenau2": 18,
               "pause": 1,
-              "abscence": "CA"
+              "abscence": "present"
             },
             "vendredi": {
               "crenau1": 9,
-              "crenau2": 15,
+              "crenau2": 18,
               "pause": 1,
-              "abscence": "RTT"
+              "abscence": "present"
             }
           },
-          {
-            "lundi": {
-              "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "jeudi": {
-              "crenau1": 9,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "vendredi": {
-              "crenau1": 9,
-              "crenau2": 15,
-              "pause": 1,
-              "abscence": "RTT"
-            }
-          },
-          {
-            "lundi": {
-              "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "jeudi": {
-              "crenau1": 9,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "vendredi": {
-              "crenau1": 9,
-              "crenau2": 15,
-              "pause": 1,
-              "abscence": "RTT"
-            }
-          },
-          {
-            "lundi": {
-              "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "jeudi": {
-              "crenau1": 9,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "vendredi": {
-              "crenau1": 9,
-              "crenau2": 15,
-              "pause": 1,
-              "abscence": "RTT"
-            }
-          },
-          {
-            "lundi": {
-              "crenau1": 9,
-              "crenau2": 17,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mardi": {
-              "crenau1": 8,
-              "crenau2": 16,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "mercredi": {
-              "crenau1": 10,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "jeudi": {
-              "crenau1": 9,
-              "crenau2": 18,
-              "pause": 1,
-              "abscence": "CA"
-            },
-            "vendredi": {
-              "crenau1": 9,
-              "crenau2": 15,
-              "pause": 1,
-              "abscence": "RTT"
-            }
-          },
-          
         ],
         "conge": {
           "CA": 25,
           "RTT": 10
         },
-        "manager": "",
-        "satut": "employe",
+        "manager": false,
+        "RH": false,
         "team": []
       },
-      
+      {
+        "mail": "manager@ynov.com",
+        "password": "1234",
+        "name": "Manager",
+        "lastname": "Lastname",
+        "birthdate": "1996-09-04",
+        "adresse": {
+          "num": "20",
+          "voie": "boulevard du général de Gaulle",
+          "comp": "bat D appt D406",
+          "cdp": 44200,
+          "ville": "Nantes"
+        },
+        "type contrat": "CDD",
+        "tauxhoraire" : 45,
+        "end_date": "2019-31-08",
+        "planning": [
+          {
+            "lundi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "jeudi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "vendredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            }
+          },
+          {
+            "lundi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "jeudi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "vendredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            }
+          },
+          {
+            "lundi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "jeudi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "vendredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            }
+          },
+          {
+            "lundi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "jeudi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "vendredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            }
+          },
+          {
+            "lundi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mardi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "mercredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "jeudi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            },
+            "vendredi": {
+              "crenau1": 8,
+              "crenau2": 18,
+              "pause": 1,
+              "abscence": "present"
+            }
+          },
+        ],
+        "conge": {
+          "CA": 25,
+          "RTT": 10
+        },
+        "manager": true,
+        "RH": false,
+        "team": ["antoine.gosset@ynov.com", "employe@ynov.com"]
+      }
       ]
     })
   }
@@ -388,10 +595,10 @@ export default {
   },
   saveUser: uUser => {
     let data = getData()
-    let userIndex = data.users.map(function (user) { return user.id }).indexOf(uUser.id);
+    let userIndex = data.users.map(function (user) { return user.mail }).indexOf(uUser.mail);
     data.users[userIndex] = uUser
     setData(data)
-    if (JSON.parse(sessionStorage.getItem('user')).id == uUser.id) {
+    if (JSON.parse(sessionStorage.getItem('user')).mail == uUser.mail) {
       sessionStorage.setItem('user', JSON.stringify(uUser))
     }
   },
@@ -404,14 +611,9 @@ export default {
     data.users.push(user)
     setData(data)
   },
-  findUser: (firstName, lastName, pseudo, mail) => {
-    let data = getData().users
-    let usersfind = {
-      firstName: data.filter(u => u.firstName.toUpperCase().includes(firstName.toUpperCase())) || [],
-      lastName: data.filter(u => u.lastName.toUpperCase().includes(lastName.toUpperCase())) || [],
-      pseudo: data.filter(u => u.pseudo.toUpperCase().includes(pseudo.toUpperCase())) || [],
-      mail: data.filter(u => u.mail.toUpperCase().includes(mail.toUpperCase())) || []
-    }
+  findUser: (mail, data) => {
+    let usersfind = data.filter(u => u.mail.toUpperCase().includes(mail.toUpperCase()))
+    
     return usersfind
   }
 }

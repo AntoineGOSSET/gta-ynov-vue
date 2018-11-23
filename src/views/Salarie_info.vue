@@ -2,8 +2,8 @@
     <div calss="salarie_info">
         <h1>Fiche d'identité</h1>
         <b-form v-on:submit.prevent="doSubmit">
-    <b-row class="form_row">
-        <b-col>
+    <b-row class="form_row justify-content-center">
+        <b-col cols="12" sm="4">
             <b-form-group id="nameInputGroup"
             label-for="nameInput">
                 <b-form-input id="nameInput"
@@ -14,7 +14,7 @@
             </b-form-group>
         </b-col>
 
-        <b-col>
+        <b-col cols="12" sm="4">
             <b-form-group id="firstnameInputGroup"
             label-for="firstnameInput">
                 <b-form-input id="firstnameInput"
@@ -26,8 +26,8 @@
         </b-col>
     </b-row>
 
-    <b-row class="form_row">
-        <b-col>
+    <b-row class="form_row justify-content-center">
+        <b-col cols="12" sm="4">
             <b-form-group id="birthdateInputGroup"
             label = "Date de naissance:"
             label-for="birthdateInput">
@@ -37,7 +37,7 @@
             </b-form-group>
         </b-col>
 
-        <b-col>
+        <b-col cols="12" sm="4">
             <b-form-group id="emailInputGroup"
             label = "Adresse mail:"
             label-for="emailInput">
@@ -49,8 +49,8 @@
         </b-col>
     </b-row>
 
-    <b-row>
-        <b-col cols="1">
+    <b-row class="justify-content-center">
+        <b-col cols="4" sm="2">
             <b-form-group id="numberadressGroup"
             label = "N°"
             label-for="numberadressInput">
@@ -61,7 +61,7 @@
             </b-form-group>
         </b-col>
 
-        <b-col cols="7">
+        <b-col cols="8" sm="6">
             <b-form-group id="roadadressGroup"
             label = "Nom de la voie"
             label-for="roadadressInput">
@@ -71,8 +71,10 @@
             </b-form-input>
             </b-form-group>
         </b-col>
+    </b-row>
+    <b-row class="justify-content-center">
 
-        <b-col cols="4">
+        <b-col cols="12" sm="8">
             <b-form-group id="completadressGroup"
             label = "Complément d'adresse"
             label-for="completadressInput">
@@ -82,8 +84,10 @@
             </b-form-input>
             </b-form-group>
         </b-col>
+    </b-row>
+    <b-row class="justify-content-center">
 
-        <b-col cols="3">
+        <b-col cols="6" sm="4">
             <b-form-group id="cityadressGroup"
             label = "Ville"
             label-for="cityadressInput">
@@ -94,7 +98,7 @@
             </b-form-group>
         </b-col>
 
-        <b-col cols="2">
+        <b-col cols="6" sm="4">
             <b-form-group id="codeadressGroup"
             label = "Code postal"
             label-for="codeadressInput">

@@ -11,17 +11,18 @@
 
   <b-collapse is-nav id="nav_collapse">
     <b-navbar-nav>
-      <b-nav-item to="/salarie_info" v-if="this.$root.isLoggin == true">Information salarie</b-nav-item>
-      <b-nav-item to="/salarie_calendar" v-if="this.$root.isLoggin == true">Planning salarie</b-nav-item>
+      <b-nav-item to="/salarie_info" v-if="user">Informations Personnelles</b-nav-item>
+      <b-nav-item to="/salarie_calendar" v-if="user">Planning</b-nav-item>
+      <b-nav-item to="/manager" v-if="user && user.manager == true">Planning membres équipe</b-nav-item>
     </b-navbar-nav>
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
 
 
-      <b-nav-item to="/login" v-if="this.$root.isLoggin == false">Connexion</b-nav-item>
+      <b-nav-item to="/login" v-if="user == undefined">Connexion</b-nav-item>
 
-      <b-nav-item-dropdown right v-if="this.$root.isLoggin == true">
+      <b-nav-item-dropdown right v-if="user">
         <!-- Using button-content slot -->
         <template slot="button-content">
           <em>Utilisateur</em>
@@ -65,15 +66,22 @@
 export default {
   created : function(){
       this.user = this.$root.getLoggedUser()
+      console.log(user)
     },
+
+    watch: {
+  '$route' (to, from) {
+    this.user = this.$root.getLoggedUser()
+    }
+  },
   methods : {
     logout : function (){
           this.user = ""
           console.log("logout")
           this.$root.logout()
           this.$root.isLoggin = false
-          this.$router.push('login')
-    }
+          this.$router.push('login')   
+    },
   },
 
 }
